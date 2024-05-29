@@ -1,0 +1,527 @@
+[vagrant@nginx ~]$ sudo su root
+[root@nginx vagrant]# yum install mc
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+ * base: mirror.theory7.net
+ * extras: mirror.proserve.nl
+ * updates: mirror.theory7.net
+base                                                                                                                               | 3.6 kB  00:00:00
+extras                                                                                                                             | 2.9 kB  00:00:00
+updates                                                                                                                            | 2.9 kB  00:00:00
+(1/4): base/7/x86_64/group_gz                                                                                                      | 153 kB  00:00:00
+(2/4): extras/7/x86_64/primary_db                                                                                                  | 253 kB  00:00:00
+(3/4): base/7/x86_64/primary_db                                                                                                    | 6.1 MB  00:00:01
+(4/4): updates/7/x86_64/primary_db                                                                                                 |  26 MB  00:00:03
+Resolving Dependencies
+--> Running transaction check
+---> Package mc.x86_64 1:4.8.7-11.el7 will be installed
+--> Processing Dependency: perl(strict) for package: 1:mc-4.8.7-11.el7.x86_64
+--> Processing Dependency: perl(bytes) for package: 1:mc-4.8.7-11.el7.x86_64
+--> Processing Dependency: perl(POSIX) for package: 1:mc-4.8.7-11.el7.x86_64
+--> Processing Dependency: perl(File::Temp) for package: 1:mc-4.8.7-11.el7.x86_64
+--> Processing Dependency: perl(File::Basename) for package: 1:mc-4.8.7-11.el7.x86_64
+--> Processing Dependency: /usr/bin/perl for package: 1:mc-4.8.7-11.el7.x86_64
+--> Processing Dependency: libgpm.so.2()(64bit) for package: 1:mc-4.8.7-11.el7.x86_64
+--> Running transaction check
+---> Package gpm-libs.x86_64 0:1.20.7-6.el7 will be installed
+---> Package perl.x86_64 4:5.16.3-299.el7_9 will be installed
+--> Processing Dependency: perl-libs = 4:5.16.3-299.el7_9 for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Socket) >= 1.3 for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Scalar::Util) >= 1.10 for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl-macros for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl-libs for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(threads::shared) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(threads) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(constant) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Time::Local) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Time::HiRes) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Storable) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Socket) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Scalar::Util) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Pod::Simple::XHTML) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Pod::Simple::Search) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Getopt::Long) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Filter::Util::Call) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(File::Spec::Unix) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(File::Spec::Functions) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(File::Spec) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(File::Path) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Exporter) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Cwd) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: perl(Carp) for package: 4:perl-5.16.3-299.el7_9.x86_64
+--> Processing Dependency: libperl.so()(64bit) for package: 4:perl-5.16.3-299.el7_9.x86_64
+---> Package perl-File-Temp.noarch 0:0.23.01-3.el7 will be installed
+--> Running transaction check
+---> Package perl-Carp.noarch 0:1.26-244.el7 will be installed
+---> Package perl-Exporter.noarch 0:5.68-3.el7 will be installed
+---> Package perl-File-Path.noarch 0:2.09-2.el7 will be installed
+---> Package perl-Filter.x86_64 0:1.49-3.el7 will be installed
+---> Package perl-Getopt-Long.noarch 0:2.40-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Usage) >= 1.14 for package: perl-Getopt-Long-2.40-3.el7.noarch
+--> Processing Dependency: perl(Text::ParseWords) for package: perl-Getopt-Long-2.40-3.el7.noarch
+---> Package perl-PathTools.x86_64 0:3.40-5.el7 will be installed
+---> Package perl-Pod-Simple.noarch 1:3.28-4.el7 will be installed
+--> Processing Dependency: perl(Pod::Escapes) >= 1.04 for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+--> Processing Dependency: perl(Encode) for package: 1:perl-Pod-Simple-3.28-4.el7.noarch
+---> Package perl-Scalar-List-Utils.x86_64 0:1.27-248.el7 will be installed
+---> Package perl-Socket.x86_64 0:2.010-5.el7 will be installed
+---> Package perl-Storable.x86_64 0:2.45-3.el7 will be installed
+---> Package perl-Time-HiRes.x86_64 4:1.9725-3.el7 will be installed
+---> Package perl-Time-Local.noarch 0:1.2300-2.el7 will be installed
+---> Package perl-constant.noarch 0:1.27-2.el7 will be installed
+---> Package perl-libs.x86_64 4:5.16.3-299.el7_9 will be installed
+---> Package perl-macros.x86_64 4:5.16.3-299.el7_9 will be installed
+---> Package perl-threads.x86_64 0:1.87-4.el7 will be installed
+---> Package perl-threads-shared.x86_64 0:1.43-6.el7 will be installed
+--> Running transaction check
+---> Package perl-Encode.x86_64 0:2.51-7.el7 will be installed
+---> Package perl-Pod-Escapes.noarch 1:1.04-299.el7_9 will be installed
+---> Package perl-Pod-Usage.noarch 0:1.63-3.el7 will be installed
+--> Processing Dependency: perl(Pod::Text) >= 3.15 for package: perl-Pod-Usage-1.63-3.el7.noarch
+--> Processing Dependency: perl-Pod-Perldoc for package: perl-Pod-Usage-1.63-3.el7.noarch
+---> Package perl-Text-ParseWords.noarch 0:3.29-4.el7 will be installed
+--> Running transaction check
+---> Package perl-Pod-Perldoc.noarch 0:3.20-4.el7 will be installed
+--> Processing Dependency: perl(parent) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+--> Processing Dependency: perl(HTTP::Tiny) for package: perl-Pod-Perldoc-3.20-4.el7.noarch
+---> Package perl-podlators.noarch 0:2.5.1-3.el7 will be installed
+--> Running transaction check
+---> Package perl-HTTP-Tiny.noarch 0:0.033-3.el7 will be installed
+---> Package perl-parent.noarch 1:0.225-244.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================================================================================
+ Package                                      Arch                         Version                                    Repository                     Size
+==========================================================================================================================================================
+Installing:
+ mc                                           x86_64                       1:4.8.7-11.el7                             base                          1.7 M
+Installing for dependencies:
+ gpm-libs                                     x86_64                       1.20.7-6.el7                               base                           32 k
+ perl                                         x86_64                       4:5.16.3-299.el7_9                         updates                       8.0 M
+ perl-Carp                                    noarch                       1.26-244.el7                               base                           19 k
+ perl-Encode                                  x86_64                       2.51-7.el7                                 base                          1.5 M
+ perl-Exporter                                noarch                       5.68-3.el7                                 base                           28 k
+ perl-File-Path                               noarch                       2.09-2.el7                                 base                           26 k
+ perl-File-Temp                               noarch                       0.23.01-3.el7                              base                           56 k
+ perl-Filter                                  x86_64                       1.49-3.el7                                 base                           76 k
+ perl-Getopt-Long                             noarch                       2.40-3.el7                                 base                           56 k
+ perl-HTTP-Tiny                               noarch                       0.033-3.el7                                base                           38 k
+ perl-PathTools                               x86_64                       3.40-5.el7                                 base                           82 k
+ perl-Pod-Escapes                             noarch                       1:1.04-299.el7_9                           updates                        52 k
+ perl-Pod-Perldoc                             noarch                       3.20-4.el7                                 base                           87 k
+ perl-Pod-Simple                              noarch                       1:3.28-4.el7                               base                          216 k
+ perl-Pod-Usage                               noarch                       1.63-3.el7                                 base                           27 k
+ perl-Scalar-List-Utils                       x86_64                       1.27-248.el7                               base                           36 k
+ perl-Socket                                  x86_64                       2.010-5.el7                                base                           49 k
+ perl-Storable                                x86_64                       2.45-3.el7                                 base                           77 k
+ perl-Text-ParseWords                         noarch                       3.29-4.el7                                 base                           14 k
+ perl-Time-HiRes                              x86_64                       4:1.9725-3.el7                             base                           45 k
+ perl-Time-Local                              noarch                       1.2300-2.el7                               base                           24 k
+ perl-constant                                noarch                       1.27-2.el7                                 base                           19 k
+ perl-libs                                    x86_64                       4:5.16.3-299.el7_9                         updates                       690 k
+ perl-macros                                  x86_64                       4:5.16.3-299.el7_9                         updates                        44 k
+ perl-parent                                  noarch                       1:0.225-244.el7                            base                           12 k
+ perl-podlators                               noarch                       2.5.1-3.el7                                base                          112 k
+ perl-threads                                 x86_64                       1.87-4.el7                                 base                           49 k
+ perl-threads-shared                          x86_64                       1.43-6.el7                                 base                           39 k
+
+Transaction Summary
+==========================================================================================================================================================
+Install  1 Package (+28 Dependent packages)
+
+Total download size: 13 M
+Installed size: 42 M
+Is this ok [y/d/N]: y
+Downloading packages:
+warning: /var/cache/yum/x86_64/7/base/packages/perl-Carp-1.26-244.el7.noarch.rpm: Header V3 RSA/SHA256 Signature, key ID f4a80eb5: NOKEY
+Public key for perl-Carp-1.26-244.el7.noarch.rpm is not installed
+(1/29): perl-Carp-1.26-244.el7.noarch.rpm                                                                                          |  19 kB  00:00:00
+(2/29): gpm-libs-1.20.7-6.el7.x86_64.rpm                                                                                           |  32 kB  00:00:00
+(3/29): perl-Exporter-5.68-3.el7.noarch.rpm                                                                                        |  28 kB  00:00:00
+(4/29): perl-File-Path-2.09-2.el7.noarch.rpm                                                                                       |  26 kB  00:00:00
+(5/29): perl-Filter-1.49-3.el7.x86_64.rpm                                                                                          |  76 kB  00:00:00
+(6/29): perl-File-Temp-0.23.01-3.el7.noarch.rpm                                                                                    |  56 kB  00:00:00
+(7/29): perl-Getopt-Long-2.40-3.el7.noarch.rpm                                                                                     |  56 kB  00:00:00
+(8/29): mc-4.8.7-11.el7.x86_64.rpm                                                                                                 | 1.7 MB  00:00:00
+(9/29): perl-Encode-2.51-7.el7.x86_64.rpm                                                                                          | 1.5 MB  00:00:00
+(10/29): perl-HTTP-Tiny-0.033-3.el7.noarch.rpm                                                                                     |  38 kB  00:00:00
+(11/29): perl-PathTools-3.40-5.el7.x86_64.rpm                                                                                      |  82 kB  00:00:00
+(12/29): perl-Pod-Perldoc-3.20-4.el7.noarch.rpm                                                                                    |  87 kB  00:00:00
+(13/29): perl-Scalar-List-Utils-1.27-248.el7.x86_64.rpm                                                                            |  36 kB  00:00:00
+(14/29): perl-Pod-Usage-1.63-3.el7.noarch.rpm                                                                                      |  27 kB  00:00:00
+(15/29): perl-Pod-Simple-3.28-4.el7.noarch.rpm                                                                                     | 216 kB  00:00:00
+(16/29): perl-Socket-2.010-5.el7.x86_64.rpm                                                                                        |  49 kB  00:00:00
+Public key for perl-5.16.3-299.el7_9.x86_64.rpm is not installed1% [===============================================     ] 6.5 MB/s |  12 MB  00:00:00 ETA
+(17/29): perl-5.16.3-299.el7_9.x86_64.rpm                                                                                          | 8.0 MB  00:00:01
+(18/29): perl-Storable-2.45-3.el7.x86_64.rpm                                                                                       |  77 kB  00:00:00
+(19/29): perl-Text-ParseWords-3.29-4.el7.noarch.rpm                                                                                |  14 kB  00:00:00
+(20/29): perl-Time-HiRes-1.9725-3.el7.x86_64.rpm                                                                                   |  45 kB  00:00:00
+(21/29): perl-constant-1.27-2.el7.noarch.rpm                                                                                       |  19 kB  00:00:00
+(22/29): perl-Pod-Escapes-1.04-299.el7_9.noarch.rpm                                                                                |  52 kB  00:00:00
+(23/29): perl-macros-5.16.3-299.el7_9.x86_64.rpm                                                                                   |  44 kB  00:00:00
+(24/29): perl-Time-Local-1.2300-2.el7.noarch.rpm                                                                                   |  24 kB  00:00:00
+(25/29): perl-threads-1.87-4.el7.x86_64.rpm                                                                                        |  49 kB  00:00:00
+(26/29): perl-threads-shared-1.43-6.el7.x86_64.rpm                                                                                 |  39 kB  00:00:00
+(27/29): perl-parent-0.225-244.el7.noarch.rpm                                                                                      |  12 kB  00:00:00
+(28/29): perl-libs-5.16.3-299.el7_9.x86_64.rpm                                                                                     | 690 kB  00:00:00
+(29/29): perl-podlators-2.5.1-3.el7.noarch.rpm                                                                                     | 112 kB  00:00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                     7.0 MB/s |  13 MB  00:00:01
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Importing GPG key 0xF4A80EB5:
+ Userid     : "CentOS-7 Key (CentOS 7 Official Signing Key) <security@centos.org>"
+ Fingerprint: 6341 ab27 53d7 8a78 a7c2 7bb1 24c6 a8a7 f4a8 0eb5
+ Package    : centos-release-7-8.2003.0.el7.centos.x86_64 (@anaconda)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+Is this ok [y/N]: y
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : 1:perl-parent-0.225-244.el7.noarch                                                                                                    1/29
+  Installing : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                                                     2/29
+  Installing : perl-podlators-2.5.1-3.el7.noarch                                                                                                     3/29
+  Installing : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                                                    4/29
+  Installing : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                                                                                              5/29
+  Installing : perl-Encode-2.51-7.el7.x86_64                                                                                                         6/29
+  Installing : perl-Text-ParseWords-3.29-4.el7.noarch                                                                                                7/29
+  Installing : perl-Pod-Usage-1.63-3.el7.noarch                                                                                                      8/29
+  Installing : 4:perl-macros-5.16.3-299.el7_9.x86_64                                                                                                 9/29
+  Installing : perl-Storable-2.45-3.el7.x86_64                                                                                                      10/29
+  Installing : perl-Exporter-5.68-3.el7.noarch                                                                                                      11/29
+  Installing : perl-constant-1.27-2.el7.noarch                                                                                                      12/29
+  Installing : perl-Socket-2.010-5.el7.x86_64                                                                                                       13/29
+  Installing : perl-Time-Local-1.2300-2.el7.noarch                                                                                                  14/29
+  Installing : perl-Carp-1.26-244.el7.noarch                                                                                                        15/29
+  Installing : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                                                16/29
+  Installing : perl-PathTools-3.40-5.el7.x86_64                                                                                                     17/29
+  Installing : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                                                           18/29
+  Installing : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                                                  19/29
+  Installing : perl-File-Temp-0.23.01-3.el7.noarch                                                                                                  20/29
+  Installing : perl-File-Path-2.09-2.el7.noarch                                                                                                     21/29
+  Installing : perl-threads-shared-1.43-6.el7.x86_64                                                                                                22/29
+  Installing : perl-threads-1.87-4.el7.x86_64                                                                                                       23/29
+  Installing : perl-Filter-1.49-3.el7.x86_64                                                                                                        24/29
+  Installing : 4:perl-libs-5.16.3-299.el7_9.x86_64                                                                                                  25/29
+  Installing : perl-Getopt-Long-2.40-3.el7.noarch                                                                                                   26/29
+  Installing : 4:perl-5.16.3-299.el7_9.x86_64                                                                                                       27/29
+  Installing : gpm-libs-1.20.7-6.el7.x86_64                                                                                                         28/29
+  Installing : 1:mc-4.8.7-11.el7.x86_64                                                                                                             29/29
+  Verifying  : 1:mc-4.8.7-11.el7.x86_64                                                                                                              1/29
+  Verifying  : perl-HTTP-Tiny-0.033-3.el7.noarch                                                                                                     2/29
+  Verifying  : perl-threads-shared-1.43-6.el7.x86_64                                                                                                 3/29
+  Verifying  : perl-Storable-2.45-3.el7.x86_64                                                                                                       4/29
+  Verifying  : perl-Exporter-5.68-3.el7.noarch                                                                                                       5/29
+  Verifying  : perl-constant-1.27-2.el7.noarch                                                                                                       6/29
+  Verifying  : perl-PathTools-3.40-5.el7.x86_64                                                                                                      7/29
+  Verifying  : 4:perl-macros-5.16.3-299.el7_9.x86_64                                                                                                 8/29
+  Verifying  : 1:perl-parent-0.225-244.el7.noarch                                                                                                    9/29
+  Verifying  : perl-Socket-2.010-5.el7.x86_64                                                                                                       10/29
+  Verifying  : perl-File-Temp-0.23.01-3.el7.noarch                                                                                                  11/29
+  Verifying  : 1:perl-Pod-Simple-3.28-4.el7.noarch                                                                                                  12/29
+  Verifying  : perl-Time-Local-1.2300-2.el7.noarch                                                                                                  13/29
+  Verifying  : 1:perl-Pod-Escapes-1.04-299.el7_9.noarch                                                                                             14/29
+  Verifying  : perl-Carp-1.26-244.el7.noarch                                                                                                        15/29
+  Verifying  : 4:perl-Time-HiRes-1.9725-3.el7.x86_64                                                                                                16/29
+  Verifying  : perl-Scalar-List-Utils-1.27-248.el7.x86_64                                                                                           17/29
+  Verifying  : perl-Pod-Usage-1.63-3.el7.noarch                                                                                                     18/29
+  Verifying  : perl-Encode-2.51-7.el7.x86_64                                                                                                        19/29
+  Verifying  : perl-Pod-Perldoc-3.20-4.el7.noarch                                                                                                   20/29
+  Verifying  : perl-podlators-2.5.1-3.el7.noarch                                                                                                    21/29
+  Verifying  : 4:perl-5.16.3-299.el7_9.x86_64                                                                                                       22/29
+  Verifying  : perl-File-Path-2.09-2.el7.noarch                                                                                                     23/29
+  Verifying  : perl-threads-1.87-4.el7.x86_64                                                                                                       24/29
+  Verifying  : gpm-libs-1.20.7-6.el7.x86_64                                                                                                         25/29
+  Verifying  : perl-Filter-1.49-3.el7.x86_64                                                                                                        26/29
+  Verifying  : perl-Getopt-Long-2.40-3.el7.noarch                                                                                                   27/29
+  Verifying  : perl-Text-ParseWords-3.29-4.el7.noarch                                                                                               28/29
+  Verifying  : 4:perl-libs-5.16.3-299.el7_9.x86_64                                                                                                  29/29
+
+Installed:
+  mc.x86_64 1:4.8.7-11.el7
+
+Dependency Installed:
+  gpm-libs.x86_64 0:1.20.7-6.el7                        perl.x86_64 4:5.16.3-299.el7_9                 perl-Carp.noarch 0:1.26-244.el7
+  perl-Encode.x86_64 0:2.51-7.el7                       perl-Exporter.noarch 0:5.68-3.el7              perl-File-Path.noarch 0:2.09-2.el7
+  perl-File-Temp.noarch 0:0.23.01-3.el7                 perl-Filter.x86_64 0:1.49-3.el7                perl-Getopt-Long.noarch 0:2.40-3.el7
+  perl-HTTP-Tiny.noarch 0:0.033-3.el7                   perl-PathTools.x86_64 0:3.40-5.el7             perl-Pod-Escapes.noarch 1:1.04-299.el7_9
+  perl-Pod-Perldoc.noarch 0:3.20-4.el7                  perl-Pod-Simple.noarch 1:3.28-4.el7            perl-Pod-Usage.noarch 0:1.63-3.el7
+  perl-Scalar-List-Utils.x86_64 0:1.27-248.el7          perl-Socket.x86_64 0:2.010-5.el7               perl-Storable.x86_64 0:2.45-3.el7
+  perl-Text-ParseWords.noarch 0:3.29-4.el7              perl-Time-HiRes.x86_64 4:1.9725-3.el7          perl-Time-Local.noarch 0:1.2300-2.el7
+  perl-constant.noarch 0:1.27-2.el7                     perl-libs.x86_64 4:5.16.3-299.el7_9            perl-macros.x86_64 4:5.16.3-299.el7_9
+  perl-parent.noarch 1:0.225-244.el7                    perl-podlators.noarch 0:2.5.1-3.el7            perl-threads.x86_64 0:1.87-4.el7
+  perl-threads-shared.x86_64 0:1.43-6.el7
+
+Complete!
+[root@nginx vagrant]# mc
+
+[root@nginx /]# учше
+bash: $'\321\203\321\207\321\210\320\265': command not found
+
+[root@nginx vagrant]# mcedit /etc/sysconfig/watchlog
+
+[root@nginx vagrant]#mcedit /var/log/watchlog.log
+
+[root@nginx vagrant]# mcedit /opt/watchlog.sh
+
+[root@nginx vagrant]# chmod +x /opt/watchlog.sh
+[root@nginx vagrant]# mc
+
+[root@nginx vagrant]#
+root@nginx vagrant]# systemctl start watchlog.timer
+[root@nginx vagrant]# systemctl list-timers
+NEXT                         LEFT      LAST PASSED UNIT                         ACTIVATES
+n/a                          n/a       n/a  n/a    watchlog.timer               watchlog.service
+Fri 2024-04-19 06:13:28 UTC  5min left n/a  n/a    systemd-tmpfiles-clean.timer systemd-tmpfiles-clean.service
+
+2 timers listed.
+Pass --all to see loaded but inactive timers, too.
+[root@nginx vagrant]#
+[root@nginx vagrant]# systemctl start watchlog.service
+[root@nginx vagrant]# tail -f /var/log/messages
+Apr 19 10:01:01 nginx systemd: Removed slice User Slice of root.
+Apr 19 11:01:01 nginx systemd: Created slice User Slice of root.
+Apr 19 11:01:01 nginx systemd: Started Session 6 of user root.
+Apr 19 11:01:01 nginx systemd: Removed slice User Slice of root.
+Apr 19 12:01:01 nginx systemd: Created slice User Slice of root.
+Apr 19 12:01:01 nginx systemd: Started Session 7 of user root.
+Apr 19 12:01:01 nginx systemd: Removed slice User Slice of root.
+Apr 19 12:31:53 nginx systemd: Starting My watchlog service...
+Apr 19 12:31:53 nginx root: Fri Apr 19 12:31:53 UTC 2024: I found word, Master!
+Apr 19 12:31:53 nginx systemd: Started My watchlog service.
+Apr 19 12:32:56 nginx systemd: Starting My watchlog service...
+Apr 19 12:32:56 nginx root: Fri Apr 19 12:32:56 UTC 2024: I found word, Master!
+Apr 19 12:32:56 nginx systemd: Started My watchlog service.
+Apr 19 12:33:56 nginx systemd: Starting My watchlog service...
+Apr 19 12:33:56 nginx root: Fri Apr 19 12:33:56 UTC 2024: I found word, Master!
+Apr 19 12:33:56 nginx systemd: Started My watchlog service.
+Apr 19 12:34:46 nginx systemd: Starting My watchlog service...
+Apr 19 12:34:46 nginx root: Fri Apr 19 12:34:46 UTC 2024: I found word, Master!
+Apr 19 12:34:46 nginx systemd: Started My watchlog service.
+
+[root@nginx vagrant]# yum install epel-release -y && yum install spawn-fcgi php php-cli mod_fcgid httpd -y
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.yandex.ru
+ * extras: mirrors.powernet.com.ru
+ * updates: mirrors.powernet.com.ru
+Resolving Dependencies
+--> Running transaction check
+---> Package epel-release.noarch 0:7-11 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================================================================================
+ Package                                  Arch                               Version                             Repository                          Size
+==========================================================================================================================================================
+Installing:
+ epel-release                             noarch                             7-11                                extras                              15 k
+
+Transaction Summary
+==========================================================================================================================================================
+Install  1 Package
+
+Total download size: 15 k
+Installed size: 24 k
+Downloading packages:
+epel-release-7-11.noarch.rpm                                                                                                       |  15 kB  00:00:00
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : epel-release-7-11.noarch                                                                                                               1/1
+  Verifying  : epel-release-7-11.noarch                                                                                                               1/1
+
+Installed:
+  epel-release.noarch 0:7-11
+
+Complete!
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+epel/x86_64/metalink                                                                                                               |  34 kB  00:00:00
+ * base: mirror.yandex.ru
+ * epel: fedora-mirror02.rbc.ru
+ * extras: mirrors.powernet.com.ru
+ * updates: mirrors.powernet.com.ru
+epel                                                                                                                               | 4.7 kB  00:00:00
+(1/3): epel/x86_64/group_gz                                                                                                        | 100 kB  00:00:00
+(2/3): epel/x86_64/updateinfo                                                                                                      | 1.0 MB  00:00:00
+(3/3): epel/x86_64/primary_db                                                                                                      | 7.0 MB  00:00:00
+Resolving Dependencies
+--> Running transaction check
+---> Package httpd.x86_64 0:2.4.6-99.el7.centos.1 will be installed
+--> Processing Dependency: httpd-tools = 2.4.6-99.el7.centos.1 for package: httpd-2.4.6-99.el7.centos.1.x86_64
+--> Processing Dependency: system-logos >= 7.92.1-1 for package: httpd-2.4.6-99.el7.centos.1.x86_64
+--> Processing Dependency: /etc/mime.types for package: httpd-2.4.6-99.el7.centos.1.x86_64
+--> Processing Dependency: libaprutil-1.so.0()(64bit) for package: httpd-2.4.6-99.el7.centos.1.x86_64
+--> Processing Dependency: libapr-1.so.0()(64bit) for package: httpd-2.4.6-99.el7.centos.1.x86_64
+---> Package mod_fcgid.x86_64 0:2.3.9-6.el7 will be installed
+---> Package php.x86_64 0:5.4.16-48.el7 will be installed
+--> Processing Dependency: php-common(x86-64) = 5.4.16-48.el7 for package: php-5.4.16-48.el7.x86_64
+---> Package php-cli.x86_64 0:5.4.16-48.el7 will be installed
+---> Package spawn-fcgi.x86_64 0:1.6.3-5.el7 will be installed
+--> Running transaction check
+---> Package apr.x86_64 0:1.4.8-7.el7 will be installed
+---> Package apr-util.x86_64 0:1.5.2-6.el7_9.1 will be installed
+---> Package centos-logos.noarch 0:70.0.6-3.el7.centos will be installed
+---> Package httpd-tools.x86_64 0:2.4.6-99.el7.centos.1 will be installed
+---> Package mailcap.noarch 0:2.1.41-2.el7 will be installed
+---> Package php-common.x86_64 0:5.4.16-48.el7 will be installed
+--> Processing Dependency: libzip.so.2()(64bit) for package: php-common-5.4.16-48.el7.x86_64
+--> Running transaction check
+---> Package libzip.x86_64 0:0.10.1-8.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+==========================================================================================================================================================
+ Package                              Arch                           Version                                        Repository                       Size
+==========================================================================================================================================================
+Installing:
+ httpd                                x86_64                         2.4.6-99.el7.centos.1                          updates                         2.7 M
+ mod_fcgid                            x86_64                         2.3.9-6.el7                                    base                             79 k
+ php                                  x86_64                         5.4.16-48.el7                                  base                            1.4 M
+ php-cli                              x86_64                         5.4.16-48.el7                                  base                            2.7 M
+ spawn-fcgi                           x86_64                         1.6.3-5.el7                                    epel                             18 k
+Installing for dependencies:
+ apr                                  x86_64                         1.4.8-7.el7                                    base                            104 k
+ apr-util                             x86_64                         1.5.2-6.el7_9.1                                updates                          92 k
+ centos-logos                         noarch                         70.0.6-3.el7.centos                            base                             21 M
+ httpd-tools                          x86_64                         2.4.6-99.el7.centos.1                          updates                          94 k
+ libzip                               x86_64                         0.10.1-8.el7                                   base                             48 k
+ mailcap                              noarch                         2.1.41-2.el7                                   base                             31 k
+ php-common                           x86_64                         5.4.16-48.el7                                  base                            565 k
+
+Transaction Summary
+==========================================================================================================================================================
+Install  5 Packages (+7 Dependent packages)
+
+Total download size: 29 M
+Installed size: 49 M
+Downloading packages:
+(1/12): apr-util-1.5.2-6.el7_9.1.x86_64.rpm                                                                                        |  92 kB  00:00:00
+(2/12): apr-1.4.8-7.el7.x86_64.rpm                                                                                                 | 104 kB  00:00:00
+(3/12): httpd-tools-2.4.6-99.el7.centos.1.x86_64.rpm                                                                               |  94 kB  00:00:00
+(4/12): libzip-0.10.1-8.el7.x86_64.rpm                                                                                             |  48 kB  00:00:00
+(5/12): httpd-2.4.6-99.el7.centos.1.x86_64.rpm                                                                                     | 2.7 MB  00:00:00
+(6/12): mailcap-2.1.41-2.el7.noarch.rpm                                                                                            |  31 kB  00:00:00
+(7/12): mod_fcgid-2.3.9-6.el7.x86_64.rpm                                                                                           |  79 kB  00:00:00
+(8/12): php-5.4.16-48.el7.x86_64.rpm                                                                                               | 1.4 MB  00:00:00
+(9/12): php-cli-5.4.16-48.el7.x86_64.rpm                                                                                           | 2.7 MB  00:00:00
+(10/12): php-common-5.4.16-48.el7.x86_64.rpm                                                                                       | 565 kB  00:00:00
+(11/12): centos-logos-70.0.6-3.el7.centos.noarch.rpm                                                                               |  21 MB  00:00:01
+warning: /var/cache/yum/x86_64/7/epel/packages/spawn-fcgi-1.6.3-5.el7.x86_64.rpm: Header V3 RSA/SHA256 Signature, key ID 352c64e5: NOKEY MB  00:00:00 ETA
+Public key for spawn-fcgi-1.6.3-5.el7.x86_64.rpm is not installed
+(12/12): spawn-fcgi-1.6.3-5.el7.x86_64.rpm                                                                                         |  18 kB  00:00:00
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                      14 MB/s |  29 MB  00:00:02
+Retrieving key from file:///etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Importing GPG key 0x352C64E5:
+ Userid     : "Fedora EPEL (7) <epel@fedoraproject.org>"
+ Fingerprint: 91e9 7d7c 4a5e 96f1 7f3e 888f 6a2f aea2 352c 64e5
+ Package    : epel-release-7-11.noarch (@extras)
+ From       : /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : apr-1.4.8-7.el7.x86_64                                                                                                                1/12
+  Installing : apr-util-1.5.2-6.el7_9.1.x86_64                                                                                                       2/12
+  Installing : httpd-tools-2.4.6-99.el7.centos.1.x86_64                                                                                              3/12
+  Installing : centos-logos-70.0.6-3.el7.centos.noarch                                                                                               4/12
+  Installing : libzip-0.10.1-8.el7.x86_64                                                                                                            5/12
+  Installing : php-common-5.4.16-48.el7.x86_64                                                                                                       6/12
+  Installing : php-cli-5.4.16-48.el7.x86_64                                                                                                          7/12
+  Installing : mailcap-2.1.41-2.el7.noarch                                                                                                           8/12
+  Installing : httpd-2.4.6-99.el7.centos.1.x86_64                                                                                                    9/12
+  Installing : mod_fcgid-2.3.9-6.el7.x86_64                                                                                                         10/12
+  Installing : php-5.4.16-48.el7.x86_64                                                                                                             11/12
+  Installing : spawn-fcgi-1.6.3-5.el7.x86_64                                                                                                        12/12
+  Verifying  : mod_fcgid-2.3.9-6.el7.x86_64                                                                                                          1/12
+  Verifying  : spawn-fcgi-1.6.3-5.el7.x86_64                                                                                                         2/12
+  Verifying  : mailcap-2.1.41-2.el7.noarch                                                                                                           3/12
+  Verifying  : apr-1.4.8-7.el7.x86_64                                                                                                                4/12
+  Verifying  : php-cli-5.4.16-48.el7.x86_64                                                                                                          5/12
+  Verifying  : httpd-2.4.6-99.el7.centos.1.x86_64                                                                                                    6/12
+  Verifying  : libzip-0.10.1-8.el7.x86_64                                                                                                            7/12
+  Verifying  : php-common-5.4.16-48.el7.x86_64                                                                                                       8/12
+  Verifying  : php-5.4.16-48.el7.x86_64                                                                                                              9/12
+  Verifying  : apr-util-1.5.2-6.el7_9.1.x86_64                                                                                                      10/12
+  Verifying  : centos-logos-70.0.6-3.el7.centos.noarch                                                                                              11/12
+  Verifying  : httpd-tools-2.4.6-99.el7.centos.1.x86_64                                                                                             12/12
+
+Installed:
+  httpd.x86_64 0:2.4.6-99.el7.centos.1       mod_fcgid.x86_64 0:2.3.9-6.el7       php.x86_64 0:5.4.16-48.el7       php-cli.x86_64 0:5.4.16-48.el7
+  spawn-fcgi.x86_64 0:1.6.3-5.el7
+
+Dependency Installed:
+  apr.x86_64 0:1.4.8-7.el7      apr-util.x86_64 0:1.5.2-6.el7_9.1  centos-logos.noarch 0:70.0.6-3.el7.centos  httpd-tools.x86_64 0:2.4.6-99.el7.centos.1
+  libzip.x86_64 0:0.10.1-8.el7  mailcap.noarch 0:2.1.41-2.el7      php-common.x86_64 0:5.4.16-48.el7
+
+Complete!
+[root@nginx vagrant]#
+[root@nginx vagrant]# mcedit /etc/sysconfig/spawn-fcgi
+
+[root@nginx vagrant]# mcedit /etc/systemd/system/spawn-fcgi.service
+
+[root@nginx vagrant]# systemctl start spawn-fcgi
+[root@nginx vagrant]# systemctl status spawn-fcgi
+● spawn-fcgi.service
+   Loaded: loaded (/etc/systemd/system/spawn-fcgi.service; bad; vendor preset: disabled)
+   Active: active (running) since Fri 2024-04-19 13:03:36 UTC; 10s ago
+ Main PID: 22416 (php-cgi)
+   CGroup: /system.slice/spawn-fcgi.service
+           ├─22416 /usr/bin/php-cgi
+           ├─22417 /usr/bin/php-cgi
+           ├─22418 /usr/bin/php-cgi
+           ├─22419 /usr/bin/php-cgi
+           ├─22420 /usr/bin/php-cgi
+           ├─22421 /usr/bin/php-cgi
+           ├─22422 /usr/bin/php-cgi
+           ├─22423 /usr/bin/php-cgi
+           ├─22424 /usr/bin/php-cgi
+           ├─22425 /usr/bin/php-cgi
+           ├─22426 /usr/bin/php-cgi
+           ├─22427 /usr/bin/php-cgi
+           ├─22428 /usr/bin/php-cgi
+           ├─22429 /usr/bin/php-cgi
+           ├─22430 /usr/bin/php-cgi
+           ├─22431 /usr/bin/php-cgi
+           ├─22432 /usr/bin/php-cgi
+           ├─22433 /usr/bin/php-cgi
+           ├─22434 /usr/bin/php-cgi
+           ├─22435 /usr/bin/php-cgi
+           ├─22436 /usr/bin/php-cgi
+           ├─22437 /usr/bin/php-cgi
+           ├─22438 /usr/bin/php-cgi
+           ├─22439 /usr/bin/php-cgi
+           ├─22440 /usr/bin/php-cgi
+           ├─22441 /usr/bin/php-cgi
+           ├─22442 /usr/bin/php-cgi
+           ├─22443 /usr/bin/php-cgi
+           ├─22444 /usr/bin/php-cgi
+           ├─22445 /usr/bin/php-cgi
+           ├─22446 /usr/bin/php-cgi
+           ├─22447 /usr/bin/php-cgi
+           └─22448 /usr/bin/php-cgi
+
+Apr 19 13:03:36 nginx systemd[1]: [/etc/systemd/system/spawn-fcgi.service:1] Assignment outside of section. Ignoring.
+Apr 19 13:03:36 nginx systemd[1]: [/etc/systemd/system/spawn-fcgi.service:2] Assignment outside of section. Ignoring.
+Apr 19 13:03:36 nginx systemd[1]: [/etc/systemd/system/spawn-fcgi.service:3] Assignment outside of section. Ignoring.
+Apr 19 13:03:36 nginx systemd[1]: Started spawn-fcgi.service.
+[root@nginx vagrant]#
+[root@study9 vagrant]# systemctl httpd@first
+Unknown operation httpd@first.
+[root@study9 vagrant]# systemctl start httpd@first
+[root@study9 vagrant]# systemctl start httpd@second
+[root@study9 vagrant]# ss -tnulp | grep httpd
+tcp   LISTEN 0      128                *:80              *:*    users:(("httpd",pid=3054,fd=4),("httpd",pid=3053,fd=4),("httpd",pid=3052,fd=4),("httpd",pid=3050,fd=4))
+tcp   LISTEN 0      128                *:8080            *:*    users:(("httpd",pid=2832,fd=4),("httpd",pid=2831,fd=4),("httpd",pid=2830,fd=4),("httpd",pid=2828,fd=4))
+[root@study9 vagrant]#
+
